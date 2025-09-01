@@ -43,31 +43,54 @@ Treinamento e avaliação de cinco modelos preditivos.
 </p>
 
 
-#Entrega 2:
+# Entrega 2:
 
-Considere que sua Machine Learning precisa ser hospedada em uma estrutura de computação em nuvem.
+Acessando a AWS, utilizamos a calculadora de custos para criar uma estimativa de uso de uma máquina Linux simples (EC2).
+- 2 CPUs.
+- 1 GIB de memória.
+- Até 5 Gigabit de rede.
+- 50 GB de armazenamento (HD).
 
- 
+- estimativaAWS.pdf -> Estimativa realizada.
 
-Metas da Entrega 2:
+Comparamos os valores em duas regiões: São Paulo (BR) X Virgínia do Norte (EUA), para responder:
+_"Suponha também que você precisa acessar rapidamente os dados dos sensores e que há restrições legais para armazenamento no exterior. Qual opção você escolheria? Justifique."_
 
-1. Usando a calculadora da AWS, sua missão nessa entrega é realizar uma estimativa de custos (On-Demand – 100%) para usar uma máquina Linux simples, comparando os valores cotados para a região de São Paulo (BR) e para a região da Virgínia do Norte (EUA). A máquina será utilizada para hospedar uma API que receberá dados dos sensores que coletam as variáveis da Entrega 1 e onde rodará a Machine Learning. Qual a solução mais barata com as seguintes configurações?
+ <p align="center">
+<img src="assets/Entrega2.png">
+</p>
 
-2 CPUs.
-1 GIB de memória.
-Até 5 Gigabit de rede.
-50 GB de armazenamento (HD).
- 
+ <p align="center">
+<img src="assets/Entrega2II.png">
+</p>
 
-2. Suponha também que você precisa acessar rapidamente os dados dos sensores e que há restrições legais para armazenamento no exterior. Qual opção você escolheria? Justifique.
+ <p align="center">
+<img src="assets/Entrega2III.png">
+</p>
+ <p align="center">
+<img src="assets/Entrega2IIV.png">
+</p>
+ <p align="center">
+<img src="assets/Entrega2IIIV.png">
+</p>
 
-Entregáveis do Enunciado 2:
+## Análise e Conclusão
 
-Acrescente esses dados no mesmo README da Entrega 1 em nome do seu grupo (de 1 a 5 pessoas), desenvolvendo o README com imagens, gráficos e textos suficientes para entender a justificativa em escolher recursos na nuvem AWS. Pedimos que continue não realizando nenhum novo commit após a data da entrega, para não ser classificado como entrega após o prazo.
-Vídeo: grave um segundo vídeo de até 5 minutos demonstrando a comparação de recursos usando a calculadora AWS, poste no YouTube de forma “não listado” e coloque o link no seu GitHub, dentro do README.
- 
+Diante da estimativa que realizamos, a alternativa mais adequada é a utilização da região São Paulo. Embora o custo mensal nesta região seja superior em comparação a Virgínia do Norte, a decisão não pode se basear somente pela parte financeira. Outros dois pontos fundamentais que justificam a escolha: restrições legais e desempenho técnico.
 
-3) PROJETO “IR ALÉM”:
+Como existem restrições legais para o armazenamento de dados no exterior, nesse cenário, manter a infraestrutura na região de São Paulo assegura conformidade com legislações como a LGPD e outras normas regulatórias aplicáveis, evitando riscos jurídicos. Além disso, como os sensores responsáveis pela coleta de dados estão localizados no Brasil, hospedar a API e o processamento de Machine Learning no mesmo país garante redução de latência e maior eficiência no acesso as informações em tempo real. Garantindo resposta rápida.
+
+Portanto, mesmo diante do custo adicional estimado de aproximadamente USD 19 por mês, a solução mais apropriada é optar pela região São Paulo (sa-east-1), essa decisão garante conformidade regulatória e eficiência técnica.
+
+O gráfico abaixo mostra a diferença de valores, mas resalta simbolicamente como os benefícios legais e desempebnho técnico podem "amenizar" os custos.
+ <p align="center">
+<img src="assets/Entrega2IX.png">
+</p>
+
+
+
+
+# PROJETO “IR ALÉM”:
 
 Nesta seção, vamos apresentar dois entregáveis extras (que não valem nota), onde os grupos poderão escolher qual “Ir Além” gostariam de desenvolver. Se postarem suas soluções, serão gratificados da seguinte forma: cada integrante receberá um troféu de excelência em busca do “Ir Além” no curso de IA da FIAP ao final do ano letivo, isto é, os grupos que entregarem um “Ir Além” entre as Fases 5 e 7, terão seus pontos somados. Cada “Ir Além” valerá até 10 pontos, portanto, teremos 30 pontos em jogo que não impactarão no boletim, e sim, apenas um game de desafio interno na turma. A nota do “Ir Além” será divulgada particularmente no chat do Teams para o responsável que postou a solução. No final do ano letivo, os pontos serão somados e divulgados amplamente no Teams. O que se espera de cada “Ir Além” será descrito a seguir. E ainda, as entregas que não estiverem totalmente funcionais e corretas, serão avaliadas mesmo assim. O importante é tentar ir além! A quantidade de grupos que serão gratificados ainda está em análise, pois vamos observar o nível do engajamento no lançamento dessa proposta. Contudo, a ideia é gratificar uma boa parte dos grupos participantes.
 
