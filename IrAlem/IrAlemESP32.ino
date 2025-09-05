@@ -8,8 +8,8 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 //  Wi-Fi
-const char* ssid = "MENDES";
-const char* password = "raro2526";
+const char* ssid = "*****"; // Escondendo dados
+const char* password = "********"; // Escondendo dados
 
 // servidor web na porta 80
 WiFiServer server(80);
