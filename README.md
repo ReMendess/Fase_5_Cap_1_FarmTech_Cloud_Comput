@@ -91,6 +91,8 @@ O gráfico abaixo mostra a diferença de valores, mas resalta simbolicamente com
 
 
 # PROJETO “IR ALÉM”:
+Link: https://youtu.be/VA6OxGdi-YU
+
 
 Nesta seção, vamos apresentar dois entregáveis extras (que não valem nota), onde os grupos poderão escolher qual “Ir Além” gostariam de desenvolver. Se postarem suas soluções, serão gratificados da seguinte forma: cada integrante receberá um troféu de excelência em busca do “Ir Além” no curso de IA da FIAP ao final do ano letivo, isto é, os grupos que entregarem um “Ir Além” entre as Fases 5 e 7, terão seus pontos somados. Cada “Ir Além” valerá até 10 pontos, portanto, teremos 30 pontos em jogo que não impactarão no boletim, e sim, apenas um game de desafio interno na turma. A nota do “Ir Além” será divulgada particularmente no chat do Teams para o responsável que postou a solução. No final do ano letivo, os pontos serão somados e divulgados amplamente no Teams. O que se espera de cada “Ir Além” será descrito a seguir. E ainda, as entregas que não estiverem totalmente funcionais e corretas, serão avaliadas mesmo assim. O importante é tentar ir além! A quantidade de grupos que serão gratificados ainda está em análise, pois vamos observar o nível do engajamento no lançamento dessa proposta. Contudo, a ideia é gratificar uma boa parte dos grupos participantes.
 
