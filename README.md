@@ -88,7 +88,7 @@ O gráfico abaixo mostra a diferença de valores, mas resalta simbolicamente com
 </p>
 
 
-# PROJETO “IR ALÉM”:
+# Projeto IR ALÉM
 Decidimos realizar o “Ir Além”. Optamos pela primeira opção.
 Link: https://youtu.be/VA6OxGdi-YU
  
@@ -156,7 +156,9 @@ Os valores são atualizados automaticamente no navegador, permitindo acompanhar 
 ### Resultado
 
 1.Dois sensores distintos foram integrados e configurados no ESP32.
+
 2.A comunicação Wi-Fi foi estabelecida com sucesso.
+
 3.Os dados coletados foram enviados e exibidos em uma interface web acessível pela rede local.
 
 ### O projeto conseguiu representar uma solução real para soluções de monitoramento agrícola inteligente dentro da FarmTech Solutions.
