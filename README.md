@@ -88,8 +88,6 @@ O gráfico abaixo mostra a diferença de valores, mas resalta simbolicamente com
 </p>
 
 
-
-
 # PROJETO “IR ALÉM”:
 Decidimos realizar o “Ir Além”. Optamos pela primeira opção.
 Link: https://youtu.be/VA6OxGdi-YU
@@ -105,7 +103,15 @@ Para o desenvolvimento deste projeto da FarmTech Solutions, foram escolhidos doi
 
 DHT22: responsável por medir temperatura e umidade do ar, fundamentais para o monitoramento climático em ambientes agrícolas.
 
+<p align="center">
+<img src="assets/DHT22.jpeg">
+</p>
+
 Capacitive Soil Moisture Sensor v2.0: utilizado para medir a umidade do solo, informação essencial para a tomada de decisão no manejo da irrigação.
+
+<p align="center">
+<img src="assets/Sensor_Solo.jpeg">
+</p>
 
 Escolhemos esses sensores por se alinharem com soluções e processos de agricultura inteligente, onde o controle de clima e de irrigação são fatores críticos para aumentar a produtividade e reduzir desperdícios de recursos hídricos.
 
@@ -114,8 +120,21 @@ Escolhemos esses sensores por se alinharem com soluções e processos de agricul
 Utilizamos um ESP32 DevKit conectado a uma protoboard de 400 pontos, com jumpers para ligação dos sensores.
 O DHT22 foi ligado ao GPIO14, enquanto o sensor de umidade do solo foi conectado ao GPIO34 - entrada analógica.
 
+<p align="center">
+<img src="assets/ESP32_Sensores.jpeg">
+</p>
+
+<p align="center">
+<img src="assets/ESP32_Sensores2.jpeg">
+</p>
+
 A comunicação Wi-Fi foi configurada no ESP32, permitindo a integração do dispositivo com a rede local.
 O firmware desenvolvido realiza a leitura periódica dos sensores e organiza os dados coletados.
+
+<p align="center">
+<img src="assets/CodigoC.jpeg">
+</p>
+
 
 ### Armazenamento e Visualização
 
@@ -123,9 +142,16 @@ Criamos uma página web hospedada no próprio ESP32 (HTTP embutido).
 
 Essa página exibe os dados organizados -Temperatura, Umidade do Ar e Umidade do Solo.
 
+<p align="center">
+<img src="assets/HTML_Leitura.jpeg">
+</p>
+
 Também foi implementado um dashboard interativo, que apresenta gráficos em tempo real dos parâmetros monitorados.
 Os valores são atualizados automaticamente no navegador, permitindo acompanhar a evolução dos dados de forma intuitiva.
 
+<p align="center">
+<img src="assets/HTML_Leitura2.jpeg">
+</p>
 
 ### Resultado
 
@@ -133,4 +159,4 @@ Os valores são atualizados automaticamente no navegador, permitindo acompanhar 
 2.A comunicação Wi-Fi foi estabelecida com sucesso.
 3.Os dados coletados foram enviados e exibidos em uma interface web acessível pela rede local.
 
-O projeto conseguiu representar uma solução real para soluções de monitoramento agrícola inteligente dentro da FarmTech Solutions.
+### O projeto conseguiu representar uma solução real para soluções de monitoramento agrícola inteligente dentro da FarmTech Solutions.
