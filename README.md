@@ -91,119 +91,46 @@ O gráfico abaixo mostra a diferença de valores, mas resalta simbolicamente com
 
 
 # PROJETO “IR ALÉM”:
+Decidimos realizar o “Ir Além”. Optamos pela primeira opção.
 Link: https://youtu.be/VA6OxGdi-YU
-
-
-Nesta seção, vamos apresentar dois entregáveis extras (que não valem nota), onde os grupos poderão escolher qual “Ir Além” gostariam de desenvolver. Se postarem suas soluções, serão gratificados da seguinte forma: cada integrante receberá um troféu de excelência em busca do “Ir Além” no curso de IA da FIAP ao final do ano letivo, isto é, os grupos que entregarem um “Ir Além” entre as Fases 5 e 7, terão seus pontos somados. Cada “Ir Além” valerá até 10 pontos, portanto, teremos 30 pontos em jogo que não impactarão no boletim, e sim, apenas um game de desafio interno na turma. A nota do “Ir Além” será divulgada particularmente no chat do Teams para o responsável que postou a solução. No final do ano letivo, os pontos serão somados e divulgados amplamente no Teams. O que se espera de cada “Ir Além” será descrito a seguir. E ainda, as entregas que não estiverem totalmente funcionais e corretas, serão avaliadas mesmo assim. O importante é tentar ir além! A quantidade de grupos que serão gratificados ainda está em análise, pois vamos observar o nível do engajamento no lançamento dessa proposta. Contudo, a ideia é gratificar uma boa parte dos grupos participantes.
-
  
+## Sistema de Coleta e Comunicação de Dados Usando ESP32 Integrado ao Wi-Fi.
 
-1. Primeira opção “Ir Além”:
+Utilizando um ESP32 real com comunicação Wi-Fi e coleta de dados via sensore, desenvolvemos uma solução para a FarmTech Solutions. 
+E criamos uma página HTML, usando o ESP32 como servidor HTTP.
 
-Título: Sistema de Coleta e Comunicação de Dados Usando ESP32 Integrado ao Wi-Fi.
+### Sensores
 
-Descrição: desenvolva um projeto utilizando um ESP32 real com comunicação Wi-Fi e coleta de dados via sensores. O grupo tem liberdade para escolher o sensor que será utilizado (precisa ser pelo menos dois sensores distintos quaisquer para dar certo), desde que esteja alinhado às soluções desenvolvidas pela sua FarmTech Solutions. Os dados coletados devem ser enviados a um serviço local ou remoto (o grupo escolhe), como:
+Para o desenvolvimento deste projeto da FarmTech Solutions, foram escolhidos dois sensores:
 
-Banco de Dados (local ou na nuvem); ou
-Página HTML para visualização/dashboard; ou
-Broker MQTT para publicação e subscrição. Experimente usar o ubidots.com; ou
-Servidor (HTTP ou outra solução apropriada).
- 
+DHT22: responsável por medir temperatura e umidade do ar, fundamentais para o monitoramento climático em ambientes agrícolas.
 
-Etapas do Projeto:
+Capacitive Soil Moisture Sensor v2.0: utilizado para medir a umidade do solo, informação essencial para a tomada de decisão no manejo da irrigação.
 
-1. Definição do Sensor e Contexto: escolha os sensores alinhados às necessidades das soluções da sua FarmTech Solutions. Descreva o motivo da escolha e o objetivo do projeto.
+Escolhemos esses sensores por se alinharem com soluções e processos de agricultura inteligente, onde o controle de clima e de irrigação são fatores críticos para aumentar a produtividade e reduzir desperdícios de recursos hídricos.
 
-2. Implementação no ESP32:
+### Implementação
 
-Integre o sensor ao ESP32.
-Configure a comunicação via Wi-Fi.
-Programe a coleta de dados e o envio para o serviço escolhido.
-3. Armazenamento ou Visualização: configure o envio de dados para:
+Utilizamos um ESP32 DevKit conectado a uma protoboard de 400 pontos, com jumpers para ligação dos sensores.
+O DHT22 foi ligado ao GPIO14, enquanto o sensor de umidade do solo foi conectado ao GPIO34 - entrada analógica.
 
-Um banco de dados local ou remoto (exemplo: SQLite, MySQL); ou
-Uma página HTML acessível via servidor hospedado no ESP32 ou um Python no PC;
-Um broker MQTT público ou privado para publicações com dashboard para visualizar os dados dos sensores.
-4. Documentação no GitHub:
+A comunicação Wi-Fi foi configurada no ESP32, permitindo a integração do dispositivo com a rede local.
+O firmware desenvolvido realiza a leitura periódica dos sensores e organiza os dados coletados.
 
-Crie uma seção no GitHub chamada "Ir Além".
-Adicione o código-fonte comentado.
-Inclua uma justificativa clara do projeto e dos sensores escolhidos.
-Insira uma figura explicativa que mostre a arquitetura do circuito e as tecnologias utilizadas. Tente usar o Wokwi.com para montar seu IoT.
-Requisitos:
+### Armazenamento e Visualização
 
-Utilizar o ESP32 real com comunicação Wi-Fi funcional.
-O sensor escolhido deve ser compatível com o contexto do projeto.
-Dados coletados devem ser postados em um dos serviços mencionados.
-Tecnologias permitidas:
-Linguagem: C/C++ ou MicroPython.
-Banco de dados: MySQL, SQLite ou Firebase.
-Servidor/Página HTML: usar ESP32 como servidor HTTP.
-Broker MQTT: Mosquitto ou outro servidor MQTT.
-Outras tecnologias: com justificativa.
-Critérios de Avaliação do Ir Além Opção 01:
+Criamos uma página web hospedada no próprio ESP32 (HTTP embutido).
 
-Funcionalidade do Sistema: coleta e envio de dados funcionais.
-Integração Wi-Fi: comunicação estável e eficiente.
-Escolha e Justificativa do Sensor: clareza e alinhamento ao contexto.
-Documentação no GitHub:
-Código-fonte organizado e comentado;
-Figura clara da arquitetura do projeto;
-Justificativa concisa.
-Apresentação Final: demonstração prática do sistema funcionando por meio de um vídeo de até 5 minutos e deixe seu GitHub organizado.
-Entrega:
+Essa página exibe os dados organizados -Temperatura, Umidade do Ar e Umidade do Solo.
 
-Código-fonte no GitHub na seção "Ir Além".
-Figura explicativa e documentação completa.
-Demonstração funcional do sistema por meio de um link de vídeo “não listado” no YouTube de até 5 minutos.
-2. Segunda Opção “Ir Além”:
-
-Título: Classificação da Saúde de Plantações Usando Machine Learning e ESP32.
-
-Descrição: implemente um sistema de Machine Learning que classifique a saúde de uma plantação em "Saudável" ou "Não saudável". Os dados devem ser coletados em tempo real por um sensor conectado ao ESP32 real, enviados para análise, e usados para treinar e validar o modelo de Machine Learning.
-
- 
-
-Etapas do Projeto:
-
-1. Escolha o tipo de sensor e a cultura agrícola que será avaliada;
-
-2. Integre o sensor ao ESP32 e configure a coleta de dados em tempo real;
-
-3. Envie os dados para o modelo de ML (treinamento e inferência);
-
-4. Desenvolva o modelo de Machine Learning utilizando bibliotecas como, por exemplo, Scikit-learn ou TensorFlow;
-
-5. Valide o modelo com dados em tempo real;
-
-6. Exiba os resultados, indicando se a plantação está saudável ou não.
-
- 
-
-Requisitos:
-
-Utilize Python para treinar o modelo e C/C++ ou MicroPython para programar o ESP32.
-Use dados coletados em tempo real do ESP32 e sensor escolhido.
-Documente o desenvolvimento e valide o modelo com dados novos.
- 
-
-Critérios de Avaliação do Ir Além Opção 2:
-
-Escolha do Sensor e Cultura: é necessário clareza na escolha do sensor e da cultura agrícola. Deve conter uma justificativa técnica demonstrando o alinhamento com o objetivo do projeto.
-Coleta e Integração de Dados: correta integração do ESP32 com o sensor, garantindo a coleta de dados em tempo real e o envio estável para análise no modelo de Machine Learning.
-Desenvolvimento do Modelo de ML: implementação e treinamento do modelo de Machine Learning utilizando bibliotecas apropriadas (exemplo: Scikit-learn ou TensorFlow ou outras). O modelo deve ser funcional e apresentar resultados coerentes.
-Validação e Resultados: validação do modelo com dados em tempo real. Apresentação clara dos resultados obtidos, indicando se a plantação está "Saudável" ou "Não saudável".
-Documentação e Justificativa no GitHub: organização e clareza da documentação:
-Código-fonte comentado;
-Justificativa clara dos sensores e metodologia usada;
-Figura da arquitetura com as tecnologias do sistema (ESP32, sensores e Machine Learning escolhida).
-Apresentação Final: demonstração prática através de um vídeo de até 5 minutos, mostrando o funcionamento do sistema e a classificação da saúde da plantação e GitHub organizado.
- 
-
-Entrega:
-
-Código-fonte no GitHub na seção "Ir Além".
-Figura explicativa e documentação completa.
-Demonstração funcional do sistema por meio de um link de vídeo “não listado” no YouTube de até 5 minutos.
+Também foi implementado um dashboard interativo, que apresenta gráficos em tempo real dos parâmetros monitorados.
+Os valores são atualizados automaticamente no navegador, permitindo acompanhar a evolução dos dados de forma intuitiva.
 
 
+### Resultado
+
+1.Dois sensores distintos foram integrados e configurados no ESP32.
+2.A comunicação Wi-Fi foi estabelecida com sucesso.
+3.Os dados coletados foram enviados e exibidos em uma interface web acessível pela rede local.
+
+O projeto conseguiu representar uma solução real para soluções de monitoramento agrícola inteligente dentro da FarmTech Solutions.
