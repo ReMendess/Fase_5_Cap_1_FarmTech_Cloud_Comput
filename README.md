@@ -91,6 +91,7 @@ O gráfico abaixo mostra a diferença de valores, mas resalta simbolicamente com
 # Projeto IR ALÉM
 Decidimos realizar o “Ir Além”. Optamos pela primeira opção.
 Link: https://youtu.be/VA6OxGdi-YU
+Pasta IrAlem
  
 ## Sistema de Coleta e Comunicação de Dados Usando ESP32 Integrado ao Wi-Fi.
 
@@ -161,4 +162,46 @@ Os valores são atualizados automaticamente no navegador, permitindo acompanhar 
 
 3.Os dados coletados foram enviados e exibidos em uma interface web acessível pela rede local.
 
-### O projeto conseguiu representar uma solução real para soluções de monitoramento agrícola inteligente dentro da FarmTech Solutions.
+ *O projeto conseguiu representar uma solução real para soluções de monitoramento agrícola inteligente dentro da FarmTech Solutions.*
+
+
+
+
+# Projeto IR ALÉM 2
+
+Realizamos um segundo projeto, utilizando sensores de baixo custo, aplicados a Internet das coisas voltado ao agronegócio.
+Nesse segundo projeto utilizamos a comunicação via protocolo MQTT, e uma aplicação em Python para criar uma visualizaçao gráfica dos dados obtidos.
+
+Link: https://www.youtube.com/watch?v=hZPx_abSSwE
+
+Pasta IrAlem_2
+
+  - DHT22: Sensor Digital que mede temperatura e umidade do ar com precisão. Esse sensor é digital pelo fato de realizar os processamentos internos dos sinais e já enviar os valores prontos em forma de bits, garatindo assim confiabilidade, simplicidade na integração de microcontroladores como o esp32.
+  
+  - Sensor Capacitive Soil: Sensor analógico que mede a variação da tensão elétrica conforme o nível de umidade do solo. Sendo assim um sensor Analógico pois apenas passa os volts para o esp32 processar esse valor em escala de "solo seco" ou "solo umido" na qual definimos no arduino ide os valores com base em experimentos sendo assim "3170" atribuido para solo seco e "1485" para solo umido.
+
+No contexto de negócio, nosso projeto se destaca no agronegócio.
+
+- A leitura em tempo real da umidade do solo permite automatizar sistemas de irrigação, reduzindo desperdicios de água e energia elétrica.
+
+- ao correlacionar esses dados de temperatura, umidade do ar e do solo. É possivel criar modelos de machine learning capazes de antecipar condições de estresse hídrico ou doenças, permitindo maior autonomia ao produtor nas tomadas de decisões.
+
+- produtores que utilizarem a nossa solução vao ter vantagens competitivas no mercado, pois vao reduzir seu custo operacional, aumentando a produtividade e assim se destacando no mercado.
+
+# <a name="c2"></a>2. Implementação no ESP32
+
+Durante a implementação do nosso projeto no Wokwi, tivemos a limitação de que o sensor soil não possui suporte na plataforma. Sendo assim tivemos que utilizar um sensor alternativo disponível na plataforma, que simula o comportamento da entrada analógica de forma semelhante.
+
+<p align="center">
+<img src="/assets/sensor-wokwi.png"></a>
+</p>
+
+# <a name="c3"></a>3. Armazenamento ou Visualização
+
+A comunicação entre o esp32 e nossa aplicação ocorre por meio do protocolo MQTT, que garante o envio das leituras dos sensores de forma eficaz e em tempo real para um broker. O envio das mensagens foi configurado com QoS 0, nível que garante máxima velocidade nesse transporte de dados, sem exigir confirmação de recebimento. Fizemos essa escolha, pelo projeto ser em um cenário de monitoramento contínuo.
+
+Criamos um script em python que se conecta ao broker, recebe as mensagens publicadas e armazena todos os valores em um arquivo csv. Facilitando assim a visualização desses dados tanto para planilhas ou até mesmo treinamento de modelos de machine learning.
+
+<p align="center">
+<img src="/assets/var-temp.png"></a>
+</p>
