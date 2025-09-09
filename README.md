@@ -17,7 +17,7 @@
 
 </div>
 
-Link do vídeo: 
+Link do vídeo: https://youtu.be/7b80WCkDx4Y
 
 
 
